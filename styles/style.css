@@ -1,0 +1,470 @@
+.bodyclaro {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+
+.toggle {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 60px;
+  border-radius: 50px;
+  transition: .2s;
+}
+
+.toggle i {
+  width: 50%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.toggle .ball {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin: 7.5px;
+  border-radius: 50%;
+  transition: .3s ease-out;
+}
+
+input {
+  display: none;
+}
+
+.light {
+  background: white;
+}
+
+.light .toggle {
+  background: linear-gradient(145deg, white, white);
+
+}
+
+.light .toggle .bxs-sun {
+  color: white;
+}
+
+.light .toggle .bx-moon {
+  color: #151d2a;
+}
+
+.light .toggle .ball {
+  background: #151d2a;
+}
+
+.dark {
+  background: #000000;
+}
+
+.dark .toggle {
+  background: #000000;
+
+}
+
+.dark .toggle .bx-sun {
+  color: white;
+}
+
+.dark .toggle .bxs-moon {
+  color: #000000;
+}
+
+.dark .toggle .ball {
+  background: white;
+  transform: translateX(60px);
+}
+
+.dark section h1 {
+  color: #ffff;
+  text-shadow: 0px 2px 4px #ffff;
+}
+
+.dark h2 {
+  color: #ffff;
+  text-shadow: 0px 2px 4px #ffff;
+}
+
+.dark .resume p {
+  color: #ffff;
+}
+
+.dark section:nth-child(1) {
+  box-shadow: 0px 2px 4px #ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria-game: black;
+  --cor-hover-game: #ff2a6d;
+  --cor-secundary-game: white;
+}
+
+body {
+  background: #01012b;
+}
+
+section {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section h1 {
+  color: #000000;
+  font-size: 45px;
+  text-shadow: 0px 2px 4px #000;
+  font-family: 'Press start 2P', cursive;
+}
+
+section:nth-child(1) {
+  box-shadow: 0px 2px 4px #000000;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 40px;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  min-width: 20vw;
+}
+
+.section-secondary {
+  width: 50%;
+}
+.resume{
+  min-width: 30vw;
+}
+
+.resume h2 {
+  display: flex;
+  margin-top: 3vh;
+  margin-left: 40vh;
+  font-size: 28px;
+  text-shadow: 0px 2px 4px #000;
+  font-family: 'Press start 2P', cursive;
+
+}
+
+.resume p {
+  font-family: 'Press start 2P', cursive;
+  color: black;
+  margin-top: 3vh;
+  margin-left: 3vw;
+  font-size: 19px;
+}
+
+.section-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-third a {
+  display: block;
+}
+
+.section-third {
+  margin-left: 15vw;
+}
+
+.botoes {
+  margin-top: 13vh;
+}
+
+.btn {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 30px;
+  font-family: 'Press start 2P', cursive;
+  font-size: 45px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .4s;
+}
+
+.light .btn-game {
+  text-shadow: 0px 2px 4px #000;
+  color: black;
+  border: 5px solid black;
+  padding: 7px 7px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0), 0 0 17px black;
+  box-shadow: inset 0 0 12px black, 0 0 10px black;
+  position: relative;
+
+}
+
+.light .btn-game::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  top: 120%;
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.light .btn-game::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  box-shadow: 0 0 24px 12px black;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.light .btn-game:hover::after,
+.light .btn-game:focus::after {
+  opacity: 1;
+}
+
+.light .btn-game:hover::before,
+.light .btn-game:focus::before {
+  opacity: 1;
+}
+
+.light .btn-game:hover,
+.light .btn-game:focus {
+  color: white;
+  text-shadow: none;
+}
+
+.btn-teaser {
+  margin-top: 25vh;
+  outline: none;
+  text-shadow: 0px 2px 4px #000;
+}
+
+.light .btn-teaser {
+  color: black;
+  border: 5px solid black;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0), 0 0 17px black;
+  box-shadow: inset 0 0 12px black, 0 0 10px black;
+  position: relative;
+
+}
+
+.light .btn-teaser::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  top: 120%;
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.light .btn-teaser::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  box-shadow: 0 0 24px 12px black;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.light .btn-teaser:hover::after,
+.light .btn-teaser:focus::after {
+  opacity: 1;
+}
+
+.light .btn-teaser:hover::before,
+.light .btn-teaser:focus::before {
+  opacity: 1;
+}
+
+.light .btn-teaser:hover,
+.light .btn-teaser:focus {
+  color: white;
+  text-shadow: none;
+}
+
+
+.dark .btn-game {
+  text-shadow: 0px 2px 4px #000;
+  color: white;
+  border: 5px solid white;
+  padding: 7px 7px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.805), 0 0 17px white;
+  box-shadow: inset 0 0 12px white, 0 0 10px white;
+  position: relative;
+
+}
+
+.dark .btn-game::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 120%;
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.dark .btn-game::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 0 24px 12px white;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.dark .btn-game:hover::after,
+.dark .btn-game:focus::after {
+  opacity: 1;
+}
+
+.dark .btn-game:hover::before,
+.dark .btn-game:focus::before {
+  opacity: 1;
+}
+
+.dark .btn-game:hover,
+.dark .btn-game:focus {
+  color: black;
+  text-shadow: none;
+}
+
+.btn-teaser {
+  margin-top: 25vh;
+  outline: none;
+  text-shadow: 0px 2px 4px #000;
+}
+
+.dark .btn-teaser {
+  color: white;
+  border: 5px solid white;
+  padding: 7px 7px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.805), 0 0 17px white;
+  box-shadow: inset 0 0 12px white, 0 0 10px white;
+  position: relative;
+
+}
+
+.dark .btn-teaser::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 120%;
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.dark .btn-teaser::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 0 24px 12px white;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.dark .btn-teaser:hover::after,
+.dark .btn-teaser:focus::after {
+  opacity: 1;
+}
+
+.dark .btn-teaser:hover::before,
+.dark .btn-teaser:focus::before {
+  opacity: 1;
+}
+
+.dark .btn-teaser:hover,
+.dark .btn-teaser:focus {
+  color: black;
+  text-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .resume h2{
+    text-align: center;
+    margin-left: 25vw;
+  }
+
+  .resume p{
+    margin-left: 25vw;
+    font-size: 15px;
+    text-align:left;
+    align-items: center;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+}

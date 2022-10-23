@@ -1,0 +1,262 @@
+
+.toggle {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 15px;
+  border-radius: 50px;
+  transition: .2s;
+}
+
+.toggle i {
+  width: 50%;
+  text-align: center;
+  line-height: 15px;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.toggle .ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-left: 22.5px;
+  border-radius: 50%;
+  transition: .2s ease-out;
+}
+
+input {
+  display: none;
+}
+
+.light {
+  background: white;
+}
+
+.light .toggle {
+  background: linear-gradient(145deg, black, black);
+}
+
+.light .toggle .bxs-sun {
+  color: black;
+}
+
+.light .toggle .bx-moon {
+  color: white;
+}
+
+.light .toggle .ball {
+  background: white;
+}
+
+.light .btn {
+  margin: 15px;
+  font-family: 'Press start 2P', cursive;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 10px;
+  color: black;
+  border: 5px solid black;
+  padding: 7px 7px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0), 0 0 17px black;
+  box-shadow: inset 0 0 12px black, 0 0 10px black;
+  position: relative;
+}
+
+.light .btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  top: 120%;
+
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.light .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  box-shadow: 0 0 24px 12px black;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.light .btn:hover::after,
+.light .btn:focus::after {
+  opacity: 1;
+}
+
+.light .btn:hover::before,
+.light .btn:focus::before {
+  opacity: 1;
+}
+
+.light .btn:hover,
+.light .btn:focus {
+  color: white;
+  text-shadow: none;
+}
+
+.dark {
+  background: black;
+}
+
+.dark .toggle {
+  background: linear-gradient(145deg, white, white);
+}
+
+.dark section {
+  border: 5px solid white;
+}
+
+.dark p {
+  color: white;
+}
+
+
+.dark .toggle .bx-sun {
+  color: black;
+}
+
+.dark .toggle .bxs-moon {
+  color: white;
+}
+
+.dark .toggle .ball {
+  background: black;
+  transform: translateX(60px);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 67vh;
+}
+
+section {
+  max-width: 100%;
+  min-width: 96vw;
+  height: 32vh;
+  line-height: 25px;
+  border: 7px solid #000000;
+  border-radius: 10px;
+  position: absolute;
+  margin: auto;
+  overflow: auto;
+}
+
+section::-webkit-scrollbar {
+  width: 5px;
+  border: 1px solid whitesmoke;
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 6px;
+}
+
+p {
+  color: #000000;
+  font-family: 'Press start 2P', cursive;
+  margin-bottom: 1px;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+#conteudo {
+  overflow: auto;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dark .btn {
+  margin: 15px;
+  font-family: 'Press start 2P', cursive;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 10px;
+  color: white;
+  border: 5px solid white;
+  padding: 7px 7px;
+  border-radius: 10px;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.805), 0 0 17px white;
+  box-shadow: inset 0 0 12px white, 0 0 10px white;
+  position: relative;
+}
+
+.dark .btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 120%;
+
+  transform: perspective(32px) rotateX(40deg) scale(1, 0.35);
+  filter: blur(24px);
+  opacity: 0.3;
+}
+
+.dark .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 0 24px 12px white;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.dark .btn:hover::after,
+.dark .btn:focus::after {
+  opacity: 1;
+}
+
+.dark .btn:hover::before,
+.dark .btn:focus::before {
+  opacity: 1;
+}
+
+.dark .btn:hover,
+.dark .btn:focus {
+  color: black;
+  text-shadow: none;
+}
